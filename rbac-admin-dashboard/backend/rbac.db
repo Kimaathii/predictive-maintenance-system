@@ -1,0 +1,676 @@
+{
+  "roles": [
+    {
+      "id": "role-superadmin",
+      "name": "Super Admin",
+      "description": "Unrestricted system access. Manages all users, roles, and settings.",
+      "color": "#ef4444",
+      "is_system": true,
+      "created_at": "2026-07-23T10:25:38.487Z"
+    },
+    {
+      "id": "role-admin",
+      "name": "Admin",
+      "description": "Manages users within their org. Cannot modify system-wide settings.",
+      "color": "#f59e0b",
+      "is_system": true,
+      "created_at": "2026-07-23T10:25:38.488Z"
+    },
+    {
+      "id": "role-manager",
+      "name": "Manager",
+      "description": "Manages team members, approves requests, views dept reports.",
+      "color": "#6366f1",
+      "is_system": false,
+      "created_at": "2026-07-23T10:25:38.488Z"
+    },
+    {
+      "id": "role-staff",
+      "name": "Staff",
+      "description": "Accesses assigned modules and manages own records only.",
+      "color": "#10b981",
+      "is_system": false,
+      "created_at": "2026-07-23T10:25:38.488Z"
+    },
+    {
+      "id": "role-viewer",
+      "name": "Viewer",
+      "description": "Read-only access. Cannot create, edit, or delete records.",
+      "color": "#64748b",
+      "is_system": false,
+      "created_at": "2026-07-23T10:25:38.488Z"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "perm-001",
+      "key": "users.create",
+      "name": "Create User",
+      "module": "User Management",
+      "description": "Create new user accounts"
+    },
+    {
+      "id": "perm-002",
+      "key": "users.edit",
+      "name": "Edit User",
+      "module": "User Management",
+      "description": "Edit user profiles and assignments"
+    },
+    {
+      "id": "perm-003",
+      "key": "users.delete",
+      "name": "Delete User",
+      "module": "User Management",
+      "description": "Permanently delete user accounts"
+    },
+    {
+      "id": "perm-004",
+      "key": "users.suspend",
+      "name": "Suspend/Activate User",
+      "module": "User Management",
+      "description": "Suspend or reactivate user accounts"
+    },
+    {
+      "id": "perm-005",
+      "key": "users.password_reset",
+      "name": "Reset Password",
+      "module": "User Management",
+      "description": "Reset user passwords"
+    },
+    {
+      "id": "perm-006",
+      "key": "roles.create",
+      "name": "Create Role",
+      "module": "Roles & Permissions",
+      "description": "Create new roles"
+    },
+    {
+      "id": "perm-007",
+      "key": "roles.edit",
+      "name": "Edit Role",
+      "module": "Roles & Permissions",
+      "description": "Rename and modify roles"
+    },
+    {
+      "id": "perm-008",
+      "key": "roles.delete",
+      "name": "Delete Role",
+      "module": "Roles & Permissions",
+      "description": "Delete non-system roles"
+    },
+    {
+      "id": "perm-009",
+      "key": "roles.assign_permissions",
+      "name": "Assign Permissions",
+      "module": "Roles & Permissions",
+      "description": "Grant or revoke role/user permissions"
+    },
+    {
+      "id": "perm-010",
+      "key": "dashboard.view",
+      "name": "View Dashboard",
+      "module": "Dashboard",
+      "description": "Access the main dashboard"
+    },
+    {
+      "id": "perm-011",
+      "key": "reports.view",
+      "name": "View Reports",
+      "module": "Reports",
+      "description": "View system and department reports"
+    },
+    {
+      "id": "perm-012",
+      "key": "reports.export",
+      "name": "Export Reports",
+      "module": "Reports",
+      "description": "Export reports to CSV"
+    },
+    {
+      "id": "perm-013",
+      "key": "settings.view",
+      "name": "View Settings",
+      "module": "Settings",
+      "description": "View system configuration"
+    },
+    {
+      "id": "perm-014",
+      "key": "settings.edit",
+      "name": "Edit Settings",
+      "module": "Settings",
+      "description": "Modify system configuration"
+    },
+    {
+      "id": "perm-015",
+      "key": "audit.view",
+      "name": "View Audit Logs",
+      "module": "Audit Logs",
+      "description": "Access the audit trail log"
+    }
+  ],
+  "role_permissions": [
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-001"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-002"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-003"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-004"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-005"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-006"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-007"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-008"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-009"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-010"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-011"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-012"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-013"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-014"
+    },
+    {
+      "role_id": "role-superadmin",
+      "permission_id": "perm-015"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-001"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-002"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-004"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-005"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-010"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-011"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-012"
+    },
+    {
+      "role_id": "role-admin",
+      "permission_id": "perm-015"
+    },
+    {
+      "role_id": "role-manager",
+      "permission_id": "perm-001"
+    },
+    {
+      "role_id": "role-manager",
+      "permission_id": "perm-002"
+    },
+    {
+      "role_id": "role-manager",
+      "permission_id": "perm-010"
+    },
+    {
+      "role_id": "role-manager",
+      "permission_id": "perm-011"
+    },
+    {
+      "role_id": "role-staff",
+      "permission_id": "perm-010"
+    },
+    {
+      "role_id": "role-viewer",
+      "permission_id": "perm-010"
+    },
+    {
+      "role_id": "role-viewer",
+      "permission_id": "perm-011"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-001",
+      "full_name": "Alice Superstar",
+      "email": "super@rbac.dev",
+      "password_hash": "$2a$10$BdvCGjyG9A9t3wCRhD.ixeEWH6ohObGQLUcDMX7ABi.AlLhrsEM5u",
+      "role_id": "role-superadmin",
+      "department": "IT Security",
+      "avatar_color": "#ef4444",
+      "status": "ACTIVE",
+      "created_at": "2026-07-23T10:25:38.580Z",
+      "created_by": null,
+      "last_login": "2026-07-23T11:28:53.568Z"
+    },
+    {
+      "id": "usr-002",
+      "full_name": "Bob Anderson",
+      "email": "admin@rbac.dev",
+      "password_hash": "$2a$10$BdvCGjyG9A9t3wCRhD.ixeEWH6ohObGQLUcDMX7ABi.AlLhrsEM5u",
+      "role_id": "role-admin",
+      "department": "Operations",
+      "avatar_color": "#f59e0b",
+      "status": "ACTIVE",
+      "created_at": "2026-07-23T10:25:38.580Z",
+      "created_by": "usr-001",
+      "last_login": "2026-07-23T10:42:31.096Z"
+    },
+    {
+      "id": "usr-003",
+      "full_name": "Carol Martinez",
+      "email": "manager@rbac.dev",
+      "password_hash": "$2a$10$BdvCGjyG9A9t3wCRhD.ixeEWH6ohObGQLUcDMX7ABi.AlLhrsEM5u",
+      "role_id": "role-manager",
+      "department": "Engineering",
+      "avatar_color": "#6366f1",
+      "status": "ACTIVE",
+      "created_at": "2026-07-23T10:25:38.580Z",
+      "created_by": "usr-001",
+      "last_login": "2026-07-23T11:32:26.490Z"
+    },
+    {
+      "id": "usr-004",
+      "full_name": "Dave Johnson",
+      "email": "staff@rbac.dev",
+      "password_hash": "$2a$10$BdvCGjyG9A9t3wCRhD.ixeEWH6ohObGQLUcDMX7ABi.AlLhrsEM5u",
+      "role_id": "role-staff",
+      "department": "Engineering",
+      "avatar_color": "#10b981",
+      "status": "ACTIVE",
+      "created_at": "2026-07-23T10:25:38.580Z",
+      "created_by": "usr-002",
+      "last_login": "2026-07-23T11:33:30.320Z"
+    },
+    {
+      "id": "usr-005",
+      "full_name": "Eve Williams",
+      "email": "viewer@rbac.dev",
+      "password_hash": "$2a$10$BdvCGjyG9A9t3wCRhD.ixeEWH6ohObGQLUcDMX7ABi.AlLhrsEM5u",
+      "role_id": "role-viewer",
+      "department": "Finance",
+      "avatar_color": "#64748b",
+      "status": "ACTIVE",
+      "created_at": "2026-07-23T10:25:38.580Z",
+      "created_by": "usr-002",
+      "last_login": "2026-07-23T10:41:32.100Z"
+    },
+    {
+      "id": "usr-006",
+      "full_name": "Frank Thompson",
+      "email": "custom@rbac.dev",
+      "password_hash": "$2a$10$BdvCGjyG9A9t3wCRhD.ixeEWH6ohObGQLUcDMX7ABi.AlLhrsEM5u",
+      "role_id": "role-staff",
+      "department": "Marketing",
+      "avatar_color": "#8b5cf6",
+      "status": "ACTIVE",
+      "created_at": "2026-07-23T10:25:38.580Z",
+      "created_by": "usr-001",
+      "last_login": null
+    }
+  ],
+  "user_permissions": [
+    {
+      "user_id": "usr-006",
+      "permission_id": "perm-011",
+      "granted": true
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "a7d4e5b2-3295-46a3-bb1e-f17730fa5d3d",
+      "actor_id": "usr-003",
+      "actor_email": "manager@rbac.dev",
+      "actor_role": "Manager",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-003",
+      "target_name": "Carol Martinez",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T11:32:26.575Z"
+    },
+    {
+      "id": "305d7e05-20c1-4c5d-b45e-e14e8582c364",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-001",
+      "target_name": "Alice Superstar",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T11:28:54.370Z"
+    },
+    {
+      "id": "7287ec24-b067-41fb-85f7-f32f9303bcc4",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-001",
+      "target_name": "Alice Superstar",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T11:06:32.921Z"
+    },
+    {
+      "id": "8d426484-7ca3-4f74-9a88-180aab261a93",
+      "actor_id": "usr-002",
+      "actor_email": "admin@rbac.dev",
+      "actor_role": "Admin",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-002",
+      "target_name": "Bob Anderson",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T10:42:31.098Z"
+    },
+    {
+      "id": "7a8dfecc-c942-4321-a8e2-ea93fec2c368",
+      "actor_id": "usr-005",
+      "actor_email": "viewer@rbac.dev",
+      "actor_role": "Viewer",
+      "action": "USER_LOGOUT",
+      "target_type": "auth",
+      "target_id": "usr-005",
+      "target_name": "Eve Williams",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T10:42:18.814Z"
+    },
+    {
+      "id": "f84587d2-1861-49d2-b0c5-adf3fec053cd",
+      "actor_id": "usr-005",
+      "actor_email": "viewer@rbac.dev",
+      "actor_role": "Viewer",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-005",
+      "target_name": "Eve Williams",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T10:41:32.164Z"
+    },
+    {
+      "id": "f08816d2-1065-4cb9-84db-a1ab003e8bb6",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_LOGOUT",
+      "target_type": "auth",
+      "target_id": "usr-001",
+      "target_name": "Alice Superstar",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T10:41:21.009Z"
+    },
+    {
+      "id": "df24d86d-bce3-49d8-8d8b-48fa5e7ae68f",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-001",
+      "target_name": "Alice Superstar",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T10:38:18.960Z"
+    },
+    {
+      "id": "213d8256-d34c-4b3d-be83-2cb50738b599",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-001",
+      "target_name": "Alice Superstar",
+      "details": null,
+      "ip_address": "127.0.0.1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T09:25:38.582Z"
+    },
+    {
+      "id": "727a3d91-e9fc-423f-8e32-7626520837ff",
+      "actor_id": "usr-002",
+      "actor_email": "admin@rbac.dev",
+      "actor_role": "Admin",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-002",
+      "target_name": "Bob Anderson",
+      "details": null,
+      "ip_address": "127.0.0.1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T08:25:38.582Z"
+    },
+    {
+      "id": "bec02d54-5d6c-4125-a0a5-9917a0611fbc",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_CREATED",
+      "target_type": "user",
+      "target_id": "usr-006",
+      "target_name": "Frank Thompson",
+      "details": "{\"role\":\"Staff\",\"dept\":\"Marketing\"}",
+      "ip_address": "127.0.0.1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-22T10:25:38.582Z"
+    },
+    {
+      "id": "f5003624-9875-44ca-9935-5569a0110050",
+      "actor_id": "usr-002",
+      "actor_email": "admin@rbac.dev",
+      "actor_role": "Admin",
+      "action": "USER_SUSPENDED",
+      "target_type": "user",
+      "target_id": "usr-004",
+      "target_name": "Dave Johnson",
+      "details": null,
+      "ip_address": "127.0.0.1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-21T10:25:38.582Z"
+    },
+    {
+      "id": "df0b04b1-7ad2-4b75-8a64-24d1f97c1186",
+      "actor_id": "usr-005",
+      "actor_email": "viewer@rbac.dev",
+      "actor_role": "Viewer",
+      "action": "PERMISSION_DENIED",
+      "target_type": "endpoint",
+      "target_id": "/api/users",
+      "target_name": "User List API",
+      "details": "{\"required\":\"users.edit\"}",
+      "ip_address": "127.0.0.1",
+      "status": "DENIED",
+      "timestamp": "2026-07-20T10:25:38.582Z"
+    },
+    {
+      "id": "9a339895-7501-470a-95ac-0a8b92cec83c",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "ROLE_PERMISSIONS_UPDATED",
+      "target_type": "role",
+      "target_id": "role-manager",
+      "target_name": "Manager",
+      "details": "{\"added\":[\"perm-011\"],\"removed\":[]}",
+      "ip_address": "127.0.0.1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-19T10:25:38.582Z"
+    },
+    {
+      "id": "40be91a9-cb59-4b8f-a70d-23c14056e7b9",
+      "actor_id": "usr-002",
+      "actor_email": "admin@rbac.dev",
+      "actor_role": "Admin",
+      "action": "PASSWORD_RESET",
+      "target_type": "user",
+      "target_id": "usr-004",
+      "target_name": "Dave Johnson",
+      "details": null,
+      "ip_address": "127.0.0.1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-18T10:25:38.582Z"
+    },
+    {
+      "id": "d4cbc0a5-ce45-4c5f-8d27-5e365f5c237d",
+      "actor_id": "usr-003",
+      "actor_email": "manager@rbac.dev",
+      "actor_role": "Manager",
+      "action": "PERMISSION_DENIED",
+      "target_type": "endpoint",
+      "target_id": "/api/roles",
+      "target_name": "Roles API",
+      "details": "{\"required\":\"roles.create\"}",
+      "ip_address": "127.0.0.1",
+      "status": "DENIED",
+      "timestamp": "2026-07-17T10:25:38.582Z"
+    },
+    {
+      "id": "8173691e-5578-482e-8c9f-ea76d7b9142b",
+      "actor_id": "usr-001",
+      "actor_email": "super@rbac.dev",
+      "actor_role": "Super Admin",
+      "action": "USER_LOGOUT",
+      "target_type": "auth",
+      "target_id": "usr-001",
+      "target_name": "Alice Superstar",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T11:32:51.669Z"
+    },
+    {
+      "id": "585b1f4e-a037-46b2-b0d0-e2033871f773",
+      "actor_id": "usr-004",
+      "actor_email": "staff@rbac.dev",
+      "actor_role": "Staff",
+      "action": "USER_LOGIN",
+      "target_type": "auth",
+      "target_id": "usr-004",
+      "target_name": "Dave Johnson",
+      "details": null,
+      "ip_address": "::1",
+      "status": "SUCCESS",
+      "timestamp": "2026-07-23T11:33:30.442Z"
+    }
+  ],
+  "settings": [
+    {
+      "key": "session_timeout",
+      "value": "30",
+      "label": "Session Timeout (minutes)",
+      "group_name": "Security"
+    },
+    {
+      "key": "min_password_length",
+      "value": "8",
+      "label": "Minimum Password Length",
+      "group_name": "Security"
+    },
+    {
+      "key": "require_2fa",
+      "value": "false",
+      "label": "Require Two-Factor Auth",
+      "group_name": "Security"
+    },
+    {
+      "key": "jwt_expiry_hours",
+      "value": "24",
+      "label": "JWT Token Expiry (hours)",
+      "group_name": "Security"
+    },
+    {
+      "key": "max_login_attempts",
+      "value": "5",
+      "label": "Max Failed Login Attempts",
+      "group_name": "Security"
+    },
+    {
+      "key": "org_name",
+      "value": "RBAC Corp",
+      "label": "Organisation Name",
+      "group_name": "General"
+    },
+    {
+      "key": "support_email",
+      "value": "support@rbac.dev",
+      "label": "Support Email",
+      "group_name": "General"
+    },
+    {
+      "key": "timezone",
+      "value": "UTC",
+      "label": "Default Timezone",
+      "group_name": "General"
+    },
+    {
+      "key": "audit_retention_days",
+      "value": "90",
+      "label": "Audit Log Retention (days)",
+      "group_name": "Compliance"
+    },
+    {
+      "key": "enforce_rbac_strict",
+      "value": "true",
+      "label": "Enforce Strict RBAC",
+      "group_name": "Compliance"
+    }
+  ]
+}
